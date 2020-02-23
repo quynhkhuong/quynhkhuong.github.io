@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển</title>
+    <style>
+        h1{
+            text-align: center;
+            color: green;
+        }
+        lable{
+            color: green;
+        }
+        table{
+            background-color: rgb(143, 250, 143);
+            color: green;
+        }
+        table,tr,td{
+            border: 1px solid blue;
+        }
+
+    </style>
+    <p id="cl"> bạn </p>
+</head>
+<body>
+    <h1>Phiếu đăng ký tham gia chương trình khuyến mại</h1>
+    <form method="GET" id="my_form"></form>
+        <table>
+            <tr>
+                <td> Họ và tên</td>
+                <td><input type="text" id="ho_ten" size="10" form="my_form"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" id="dia_chi" size="10" form="my_form"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" id="dt" form="my_form"></td>
+            </tr>
+            <tr>
+                <td>Phái</td>
+                <td>
+                    <input type="radio"  id="phai" form="my_form" name="gioitinh" value="Nam">
+                    <label for="phai">Nam</label>
+                    <input type="radio" id="phai" form="my_form" name="gioitinh" value="Nữ">
+                    <label for="phai">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <select name="nghe" id="nghe">
+                        <option value="Giáo viên">Giáo viên</option>
+                        <option value="Bác sĩ">Bác sĩ</option>
+                        <option value="Kỹ sư">Kỹ sư</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn sản phẩm tham gia</td>
+                <td>
+                    <select name="chon" id="chon" size="4" multiple>
+                        <option value="1" selected>Kem đánh răng</option>
+                        <option value="2" selected>Bột giặt</option>
+                        <option value="3" selected>Dầu gội</option>
+                        <option value="4" selected>Sữa tắm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Số người dự đoán tham gia</td>
+                <td><input type="text"  id="du_doan" name="du_doan"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="Myfuntion()" >Đồng ý</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="tb"> </div>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function Myfuntion{
+                var x=document.getElementById("cl").innerText;
+                document.getElementById("tb").innerHTML =x;
+                
+ 
+            }
+        </script>
+
+    
+</body>
+</html>

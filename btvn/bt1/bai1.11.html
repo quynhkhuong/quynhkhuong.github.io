@@ -19,7 +19,8 @@
 </head>
 <body>
     <h1>Đăng nhập</h1>
-    <form >
+    <form action="/action_page.php"
+    >
         <table>
             <tr>
                 <td><label for="Mand" >Mã người dùng:</label></td>
@@ -33,13 +34,12 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="button" >
-                    <button onclick="Myfuntion">Đồng ý</button>
+                    <button type="button" onclick="MND.value=Mand.value">Đồng ý</button>
                 </td>
             </tr>
             <tr>
                 <td colspan="2" >
-                    <input type="text" id="MDN">
+                    <output name="MND" for="Mand"> </output>
                 </td>
 
             </tr>
@@ -47,11 +47,7 @@
         
         
     </form>
-    <script>
-        function Myfuntion()
-        document.getElementById("MND").Value = document.getElementById("Mand").value;
-
-    </script>
+    
     
 </body>
 </html>

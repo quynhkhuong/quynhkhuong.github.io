@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+        }
+        lable{
+            color: rgb(35, 170, 233);
+        }
+        table{
+            background-color: rgb(227, 250, 143);
+            color: rgb(35, 170, 233);
+        }
+        table,tr,td{
+            border: 1px solid rgb(35, 170, 233);
+        }
+        fieldset{
+            border:1px solid black;
+            width:350px ;
+            height: 55px;
+        }
+        legend{
+            text-align: left;
+            font-style: italic;
+            color:brown;
+        }
+        textarea{
+            width: 300px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>Đăng ký du lịch</h1>
+    <form method="GET" >
+        <table>
+            <tr>
+                <td> Họ và tên</td>
+                <td><input type="text" id="ho_ten" size="10" ></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" id="dia_chi" size="10" ></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" id="dt" ></td>
+            </tr>
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td>
+                   <input type="checkbox" id="khach" checked>
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn tuor</td>
+                <td>
+                    <select name="tour" id="tour">
+                        <optgroup label="Miền Bắc">    
+                            <option value="1">Hà Nội- Hạ Long- Sapa</option>
+                            <option value="2">Hà Nội- Chùa Hương- Ninh Bình</option>
+                            <option value="3">Hà Nội- Cát Bà- Tuần Châu</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">    
+                            <option value="1">Huế- Bạch Mã- Đà Nẵng</option>
+                            <option value="2">Nha Trang- Đà Lạt</option>
+                            <option value="3">Buôm Mê Thuật- Gia Lai- Kontum</option>
+                        </optgroup>
+                        <optgroup label="Miền Nam">    
+                            <option value="1">TP.HCM- Cần Thơ- Cà Mau</option>
+                            <option value="2">TP.HCM- Mỹ Tho</option>
+                            
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio"  id="xe1"  name="xe" value="xe">
+                    <label for="xe1">Máy bay</label>
+                    <input type="radio" id="xe2"  name="xe" value="xe" checked>
+                    <label for="xe2">Xe ô tô</label>
+                </td>
+            </tr>
+            <tr>
+                
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Số lượng đoàn khách</legend>
+                        Người lớn <input type="number">
+                        Trẻ em <input type="number" >
+
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td>
+                    <textarea name="ghi" id="ghi" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="Myfuntion()" >Đồng ý</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="tb"> </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+        <script>
+            function Myfuntion{
+                var x=document.getElementById("cl").innerText;
+                document.getElementById("tb").innerHTML =x;
+                
+ 
+            }
+        </script>
+
+    
+</body>
+</html>
