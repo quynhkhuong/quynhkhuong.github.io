@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form và các điều khiển trên form </title>
+    <style>
+        h1{
+            text-align: center;
+            color: brown;
+        }
+        table{
+            background-color: cadetblue;
+        }
+        table,tr,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Đăng nhập</h1>
+    <form >
+        <table>
+            <tr>
+                <td><label for="Mand" >Mã người dùng:</label></td>
+       
+                <td> <input type="text" id="Mand" name="Mand" value=""></td>
+        
+            </tr>
+            <tr>
+                <td><label for="MK">Mật khẩu:</label></td>
+                <td><input type="password" id="MK" name="MK"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" >
+                    <button onclick="Myfuntion">Đồng ý</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <input type="text" id="MDN">
+                </td>
+
+            </tr>
+        </table>
+        
+        
+    </form>
+    <script>
+        function Myfuntion()
+        document.getElementById("MND").Value = document.getElementById("Mand").value;
+
+    </script>
+    
+</body>
+</html>

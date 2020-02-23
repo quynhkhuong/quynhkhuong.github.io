@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bảng , trộn dòng cột</title>
+    <style>
+        body{
+            font-family: Tahoma;
+            font-size: 12px;
+        }
+        table{
+            width: 100%;
+            border:1px solid #CC0033;
+            
+            border-collapse: collapse;
+        }
+        tr,td{
+            border:1px solid #CC0033;
+        }
+        th{
+            background-color:#CC0033 ;
+            color: white;
+            border:1px solid white;
+        }
+        #p1{
+            /* valign:"bottom"  */
+            text-align: center;
+            color: #CC0033;
+
+        }
+        #p2{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color:#CC0033 ;">Chương trình học - ngành lập trình</h1>
+    <table>
+        <tr>
+            <th  rowspan="2">Nhóm học phần</th> 
+            <th rowspan="2">Môn học</th>
+            <th colspan="2">Số tiết</th>
+        </tr>
+        <tr>
+            <th>Lý thuyết</th> <th>Thực hành</th>
+        </tr>
+        <tr>
+            <td rowspan="6" id="p1" >I <br> Tin học văn phòng</td>
+            <td>Hệ điều hành Windowns</td> <td id="p2">3</td> <td id="p2">5</td>
+        </tr>
+        <tr>
+            <td> Sử dụng internet</td> <td id="p2">3</td> <td id="p2">5</td>
+        </tr>
+        <tr>
+            <td> Soạn thảo văn bản với MS Word</td> <td id="p2">24</td> <td id="p2">40</td>
+        </tr>
+        <tr>
+            <td> Tạo bài trình diễn với MS PowerPoint</td> <td id="p2">9</td> <td id="p2">15</td>
+        </tr>
+        <tr>
+            <td> Xử lý số liệu với MS excel</td> <td id="p2">24</td> <td id="p2">40</td>
+        </tr>
+        <tr>
+            <td> Tạo trang web với MS FrontPage</td> <td id="p2">9</td> <td id="p2">15</td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="p1">II <br> Kỹ thuật lập trình (VB.NET)</td>
+            <td>Nhập môn lập trình</td> <td id="p2">36</td> <td id="p2">60</td>
+        </tr>
+        <tr>
+            <td>Kỹ thuật lập trình</td> <td id="p2">36</td> <td id="p2">60</td>
+        </tr>
+        
+            <td colspan="4">...</td>
+        
+    </table>
+</body>
+</html>
