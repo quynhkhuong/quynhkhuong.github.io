@@ -1,0 +1,27 @@
+p{
+    color: blue;
+}
+/*
+reset browser
+ *{
+    padding: 0px;
+    margin: 0px;
+} */
+
+.p2{
+    color: red;
+    /* background-color: blue; */
+}
+p.p1{
+    color: blue;
+}
+#p_id{
+    color: yellow;
+}
+p[class] {
+    color: red;
+
+}
+p[class="firstp light"]{
+    background-color: yellow;
+}

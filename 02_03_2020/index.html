@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: red;
+            display: inline;
+        }
+        a{
+            background-color: blue;
+        }
+        .mydiv{
+            width: 100px;
+            height: 100px;
+            color: black;
+            background-color: yellow;
+            /* display: inline; */
+            display: inline-block;
+        }
+        .my-table, ,.my-table tr, .my-table tr td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .my-table{
+            
+
+        }
+    </style>
+</head>
+<body>
+    <!-- các thẻ heading ,pragraph, format -->
+    <h1>heading6</h1>
+    <!-- phân biệt inline và block -->
+    <p>this is pragraph </p>
+    <a href="">facebook.com</a>
+    <div class="mydiv"> my div</div>
+    <ul>
+        <li>1</li>
+    </ul>
+    <table>
+        <tr>
+            <td>#</td>
+            <td colspan="2">infor</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Class </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ngan</td>
+            <td rowspan="4">rjs2002E</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Binh</td>
+            <td>rjs2002E</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>lan</td>
+            <td>rjs2002E</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>ddd</td>
+            <td>rjs2002E</td>
+        </tr>
+        
+    </table>
+    <!-- html form -->
+    <form action="login.php" method="POST">
+        <fieldset>
+            <legend>login form</legend>
+        <label for="">username:</label>
+        <input type="text" id="username" name="username" placeholder="inter username">
+        <br>
+        <br>
+        <label for="">password</label>
+        <input type="password" id="password" name="password" placeholder="inter password">
+        <br><br>
+        <select name="yearofbirth" id="yearofbirth">
+            <option value="1">thang 1</option>
+            <option value="2">thang 2</option>
+            <option value="3">thang 3</option>
+            <option value="4">thang 4</option>
+        </select>
+        <label for="list-name">list-name:</label>
+        <select name="list-name" id="list-name">
+            <option value="1">nguyen van a</option>
+            <option value="2">nguyen van b</option>
+            <option value="3">nguyen van a</option>
+        </select>
+        <br><br>
+        <label for="male">Nam</label>
+        <input type="radio" id="male" name="male">
+        <label for="male">Nu</label>
+        <input type="radio" id="male" name="male">
+        <br><br>
+        <input type="checkbox" id="for-policy">
+        <label for="for-policy">ban co dong y voi policy cua chung toi</label>
+        <br><br>
+        choose date:
+        <input type="date" name="date" id="date" max="1980-12-31">
+        <br><br>
+        color picker:
+        <input type="color" name="color-picker" id="color-picker">
+        <br><br>
+        heigh:
+        <input type="number" name="heigh" id="heigh" min="1" max="5">
+        <input type="submit" value="submit" id="submit" onclick="onSubmit()">
+        <input type="submit" value="submit2" id="submit" onclick="alert('hello class')">
+        <br><br>
+        <p  id="show-success" style="color: green;background-color: gray ;display: none">ban da dang nhap thanh cong</p>
+    </fieldset>
+    </form>
+
+    <script>
+        function onSubmit(){
+            event.preventDefault();
+            document.getElementById("show-success").style.color=blue;
+            var pSuccess=document.getElementById("show-success");
+            pSuccess.style.display="inline";
+            pSuccess.style.color ="red";
+        }
+
+    </script>
+    <!-- html layout -->
+    <header>
+        <h1>This is header</h1>
+    </header>
+    <nav>
+        <ul>
+            <ul>
+                <li><a href="#">Home></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#"></a>contact</li>
+                <li><a href="#"></a>books</li>
+            </ul>
+        </ul>
+    </nav>
+</body>
+</html>

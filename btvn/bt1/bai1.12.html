@@ -19,9 +19,13 @@
         table,tr,td{
             border: 1px solid blue;
         }
+        #result{
+            display: none;
+            color: red;
+        }
 
     </style>
-    <p id="cl"> bạn </p>
+    
 </head>
 <body>
     <h1>Phiếu đăng ký tham gia chương trình khuyến mại</h1>
@@ -75,20 +79,20 @@
                 <td><input type="text"  id="du_doan" name="du_doan"></td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <button onclick="Myfuntion()" >Đồng ý</button>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" onclick="event.preventDefault();myFuntion(event)"  value="Đồng ý">
                 </td>
             </tr>
-            <tr>
-                <td colspan="2">
-                    <div id="tb"> </div>
+            <tr id="result">
+                <td colspan="2" >
+                    Bạn đã đăng ký thành công!
                 </td>
             </tr>
         </table>
         <script>
-            function Myfuntion{
-                var x=document.getElementById("cl").innerText;
-                document.getElementById("tb").innerHTML =x;
+            function myFuntion(event){
+                
+                document.getElementById("result").style.display="contents";
                 
  
             }

@@ -15,35 +15,42 @@
         table,tr,td{
             border: 1px solid black;
         }
+        #form table{
+            margin: auto;
+        }
     </style>
 </head>
 <body>
     <h1>Đăng nhập</h1>
-    <form action="/action_page.php"
-    >
+    <form action="/action_page.php" id="form"    >
         <table>
             <tr>
                 <td><label for="Mand" >Mã người dùng:</label></td>
        
-                <td> <input type="text" id="Mand" name="Mand" value=""></td>
+                <td> <input type="text" id="Mand" name="Mand" value="default" ></td>
         
             </tr>
             <tr>
                 <td><label for="MK">Mật khẩu:</label></td>
                 <td><input type="password" id="MK" name="MK"></td>
             </tr>
-            <tr>
+            <tr style="text-align: center;">
                 <td colspan="2">
-                    <button type="button" onclick="MND.value=Mand.value">Đồng ý</button>
+                    <input type="submit" onclick="onSubmit()" value="Đồng ý"></input>
                 </td>
             </tr>
-            <tr>
-                <td colspan="2" >
-                    <output name="MND" for="Mand"> </output>
-                </td>
-
+            <tr style="text-align: center;">
+                <td colspan="2" id="result"></td>
             </tr>
         </table>
+        
+        <script>
+            function onSubmit(){
+                event.preventDefault();
+                var Result=document.getElementById("Mand").value;
+                document.getElementById("result").innerHTML=Result;
+            }
+        </script>
         
         
     </form>

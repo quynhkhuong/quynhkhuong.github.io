@@ -32,6 +32,18 @@
         textarea{
             width: 300px;
         }
+        #result{
+            display: none;
+            text-align: center;
+            color: red;
+        }
+        #sl{
+            width: 30px;
+        }
+        #k1{
+            text-align: center;
+            margin: auto;
+        }
 
     </style>
     
@@ -92,10 +104,10 @@
             <tr>
                 
                 <td colspan="2">
-                    <fieldset>
+                    <fieldset id="k1">
                         <legend>Số lượng đoàn khách</legend>
-                        Người lớn <input type="number">
-                        Trẻ em <input type="number" >
+                        Người lớn <input type="number" id="sl">
+                        Trẻ em <input type="number" id="sl">
 
                     </fieldset>
                 </td>
@@ -106,22 +118,22 @@
                     <textarea name="ghi" id="ghi" cols="30" rows="10"></textarea>
                 </td>
             </tr>
-            <tr>
+            <tr style="text-align: center;">
                 <td colspan="2">
-                    <button onclick="Myfuntion()" >Đồng ý</button>
+                    <input type="submit" onclick="Myfuntion()" value="Đồng ý">
                 </td>
             </tr>
-            <tr>
+            <tr id="result">
                 <td colspan="2">
-                    <div id="tb"> </div>
+                    Bạn đã đăng ký thành công!!!
                 </td>
             </tr>
         </table>
     </form>
         <script>
-            function Myfuntion{
-                var x=document.getElementById("cl").innerText;
-                document.getElementById("tb").innerHTML =x;
+            function Myfuntion(){
+                event.preventDefault();
+                document.getElementById("result").style.display="contents";
                 
  
             }

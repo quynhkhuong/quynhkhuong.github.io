@@ -6,7 +6,7 @@
     <title>Tạo bảng trộn dòng và cột</title>
     <style>
         table{
-            width: 100%;
+            padding: 5px;
             border:1px solid #CC0033;
             
             border-collapse: collapse;
@@ -14,20 +14,24 @@
         tr,td{
             border:1px solid #CC0033;
         }
+        td:first-child{
+            width: 150px;
+        }
         #p1{
             background-color: #FF0000;
             color: white;
             font-weight: bold;
-            font-size: 20px;
+            
             text-align: right;
+            width: 95%;
         }
         #p2{
             background-color:#FFBBBB ;
             color: #FF0000;
             font-weight: bold;
-            font-size: 28px;
+            
             text-align: center;
-            height: 200px;
+            font-size: 20px;
         }
         #p3{
             color: #FF0000;
@@ -41,17 +45,17 @@
 <body>
     <table>
         <tr>
-            <td id="p1" colspan="2">Công nghệ dầu gội dưỡng tóc mới</td> 
-            <td rowspan="3" style="text-align: center;width: 30px;"><img src="./images/Double_rich.jpg" alt="Double_rich"></td>
+            <td id="p1" colspan="3">Công nghệ dầu gội dưỡng tóc mới</td> 
+            <td rowspan="3" style="text-align: center;width: 50px;"><img src="./images/Double_rich.jpg" alt="Double_rich" width="100px"></td>
         </tr>
         <tr>
-            <td colspan="2"></td>
+            <td colspan="3"></td>
         </tr>
         <tr>
-            <td id="p2" colspan="2">Tỏa sáng cùng DOUBLE RICH</td>
+            <td id="p2" colspan="3">Tỏa sáng cùng DOUBLE RICH</td>
         </tr>
         <tr>
-            <td>
+            <td colspan="2" style="width: 50%;">
                 <ul>
                     <li> <font id="p3"> Sản phẩm khuyến mại:</font>
                         <ul><li>Dầu gội Double Rich mới 200ml, 400ml có tem khuyến mãi</li></ul>
